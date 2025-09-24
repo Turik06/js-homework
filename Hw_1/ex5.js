@@ -24,7 +24,7 @@ function firstNprime(N) {
   return primes;
 }
 
-// --- Тесты ---
+//Тесты
 console.log(firstNprime(5));   // [2, 3, 5, 7, 11]
 console.log(firstNprime(10));  // [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 console.log(firstNprime(1));   // [2]
