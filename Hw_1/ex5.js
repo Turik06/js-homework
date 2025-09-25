@@ -7,7 +7,7 @@ function firstNprime(N) {
   while (primes.length < N) {
     let isPrime = true;
 
-    for (let div = 2; div <= Math.sqrt(num); div++) {
+    for (let div = 2; div <= num ** 0.5; div++) {
       if (num % div === 0) {
         isPrime = false;
         break;

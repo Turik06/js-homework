@@ -1,7 +1,7 @@
 // 1.5. Найти все делители натурального числа N.
 function natural_number(N) {
     let divisors = [];
-    for (let i = 1; i <= Math.sqrt(N); i++) {
+    for (let i = 1; i <= N ** 0.5; i++) {
         if (N % i === 0) {
             divisors.push(i);
             if (N / i !== i) 
