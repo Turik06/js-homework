@@ -3,37 +3,36 @@
 const subjects = {
     list: "Математика,Физика,Информатика",
 
-    // Метод для добавления предмета
-    addSubject(subject) {
-        let subjectArray = this.list.split(','); // Преобразуем строку в массив
-        if (!subjectArray.includes(subject)) { // Проверяем, есть ли предмет
-            subjectArray.push(subject); // Добавляем предмет
-            this.list = subjectArray.join(','); // Преобразуем массив обратно в строку
+    add_subject(subject) {
+        let subjectArray = this.list.split(','); 
+        if (!subjectArray.includes(subject)) { 
+            subjectArray.push(subject); 
+            this.list = subjectArray.join(',');
         } else {
             console.log(`${subject} уже есть в списке.`);
         }
     },
 
-    // Метод для удаления предмета
-    removeSubject(subject) {
-        let subjectArray = this.list.split(','); // Преобразуем строку в массив
-        let index = subjectArray.indexOf(subject); // Находим индекс предмета
+   
+    remove_subject(subject) {
+        let subjectArray = this.list.split(',');
+        let index = subjectArray.indexOf(subject);
         if (index !== -1) {
-            subjectArray.splice(index, 1); // Удаляем предмет
-            this.list = subjectArray.join(','); // Преобразуем массив обратно в строку
+            subjectArray.splice(index, 1);
+            this.list = subjectArray.join(',');
         } else {
             console.log(`${subject} нет в списке.`);
         }
     }
 };
 
-// Примеры использования
+//Тесты
 console.log("Изначальный список:", subjects.list);
-subjects.addSubject("Химия");
-console.log("После добавления Химии:", subjects.list);
-subjects.addSubject("Физика");
-console.log("После попытки добавить Физику:", subjects.list);
-subjects.removeSubject("Информатика");
-console.log("После удаления Информатики:", subjects.list);
-subjects.removeSubject("Биология");
-console.log("После попытки удалить Биологию:", subjects.list);
+subjects.add_subject("Химия");
+console.log("Добавления Химии:", subjects.list);
+subjects.add_subject("Физика");
+console.log("Добавления Физику:", subjects.list);
+subjects.remove_subject("Информатика");
+console.log("Удаления Информатики:", subjects.list);
+subjects.remove_subject("Биология");
+console.log("Удаления Биологии:", subjects.list);

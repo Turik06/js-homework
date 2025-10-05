@@ -1,4 +1,5 @@
 // 2.4. Создайте объект с днями недели. Ключами в нем должны служить номера дней от начала недели (понедельник - первый и т.д.). Добавьте метод, который выводит текущий день недели.
+
 const weekdays = {
     1: "Понедельник",
     2: "Вторник",
@@ -8,10 +9,13 @@ const weekdays = {
     6: "Суббота",
     7: "Воскресенье",
 
-}
+    get_day() {
+        const toDay = new Date();
+        let day = toDay.getDay();
+        day = day === 0 ? 7 : day;
+        return this[day];
+    }
+};
 
-function get_day(day){
-    console.log(weekdays[day]); 
-}
 
-console.log("Сегодня: ", get_day(5));
+console.log("Сегодня: ", weekdays.get_day());

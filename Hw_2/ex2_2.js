@@ -3,33 +3,19 @@
 let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
 function array_copy(arr) {
-    // Копия 1
-    let arr1 = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        arr1.push(arr[i]); 
+    let arr1 = arr.slice().reverse();
+    
+    let arr2 = [...arr];
+    for (let i = 0; i < Math.floor(arr2.length / 2); i++) {
+        [arr2[i], arr2[arr2.length - 1 - i]] = [arr2[arr2.length - 1 - i], arr2[i]];
     }
 
-    // Копия 2
-    let arr2 = [];
-    for (let i = 0; i < arr.length; i++) {
-        arr2[i] = arr[arr.length - 1 - i];
-    } 
-
     console.log("Изначальный массив:", arr);
-    console.log("Копия 1: ", arr1);
-    console.log("Копия 2: ", arr2);
+    console.log("Копия 1:", arr1);
+    console.log("Копия 2:", arr2);
 }
 
 array_copy(arr);
-// Изначальный массив: [
-//   9, 8, 7, 6, 5,
-//   4, 3, 2, 1
-// ]
-// Копия 1:  [
-//   1, 2, 3, 4, 5,
-//   6, 7, 8, 9
-// ]
-// Копия 2:  [
-//   1, 2, 3, 4, 5,
-//   6, 7, 8, 9
-// ]
+// Изначальный массив: [9, 8, 7, 6, 5, 4, 3, 2, 1]
+// Копия 1  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Копия 2  [1, 2, 3, 4, 5, 6, 7, 8, 9]

@@ -4,7 +4,7 @@ function deleteTire(word) {
   let parts = word.split('-'); 
   for (let i = 1; i < parts.length; i++) {
    
-    parts[i] = parts[i][0].toUpperCase() + parts[i].slice(1);
+    parts[i] = parts[i].at(0).toUpperCase() + parts[i].slice(1);
   }
   return parts.join(''); 
 }

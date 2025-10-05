@@ -27,8 +27,10 @@ function translate(str, language) {
     return translatedWords.join(' ');
 }
 
-// Примеры использования
+
+//Тесты
 console.log(translate("hello my friend", "ru")); // привет мой друг
 console.log(translate("hello my friend", "fr")); // bonjour mon ami
 console.log(translate("hello dear friend", "ru")); // привет дорогой друг
 console.log(translate("hello dear friend", "fr")); // bonjour cher ami
+console.log(translate("my dear friend", "ru")); // мой дорогой друг
