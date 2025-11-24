@@ -1,0 +1,303 @@
+body {
+    font-family:  Arial, sans-serif;
+    background-color: #E5E5E5;
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    position: sticky;
+    top: 40px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field > label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.field input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button[name="add-phone-btn"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 10px;
+    display: block;
+}
+button[name="add-phone-btn"] img {
+    width: 20px; 
+    height: 20px;
+    display: block;
+    pointer-events: none; 
+}
+
+button[name="add-phone-btn"] {
+    background: none;
+    border: none;
+    color: #007AFF;
+    cursor: pointer;
+    padding: 5px 0;
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: #007AFF;
+    font-size: 14px;
+}
+
+.remove-phone-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #555;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.phone-field-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.phone-field-wrapper label {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.business-card {
+    width: 500px;
+    height: 280px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+
+.card-org {
+    font-size: 14px;
+    color: #8E8E93;
+    margin-bottom: 20px;
+}
+
+.card-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-position {
+    font-size: 16px;
+    color: #8E8E93;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.card-item--phones {
+    margin-bottom: auto;
+}
+
+.control-group {
+    display: flex;
+    gap: 8px;
+}
+
+.control-group input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.control-group--colors label span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.control-group--colors input:checked + span {
+    border-color: #007AFF;
+}
+
+.control-group--colors input[value="#000000"] + span { background-color: #000000; }
+.control-group--colors input[value="#0055FB"] + span { background-color: #0055FB; }
+.control-group--colors input[value="#FF2D55"] + span { background-color: #FF2D55; }
+.control-group--colors input[value="#34C759"] + span { background-color: #34C759; }
+.control-group--colors input[value="#FF9500"] + span { background-color: #FF9500; }
+.control-group--colors input[value="#AF52DE"] + span { background-color: #AF52DE; }
+.control-group--colors input[value="#555555"] + span { background-color: #555555; }
+.control-group--colors input[value="#8E8E93"] + span { background-color: #8E8E93; }
+.control-group--colors input[value="#C7C7CC"] + span { background-color: #C7C7CC; }
+
+
+.control-group--buttons label span {
+    display: block;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+.control-group--buttons input:checked + span {
+    background-color: #007AFF;
+    color: white;
+    border-color: #007AFF;
+}
+
+.field--inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.field--inline > label:first-child {
+    flex-basis: 80px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+.field--inline input[type="text"] {
+    flex-grow: 1;
+}
+
+.checkbox-label {
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-label input:checked ~ .custom-checkbox {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+.checkbox-label input:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+.align-icon {
+    display: block;
+    width: 36px;
+    height: 28px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    object-fit: contain; 
+}
+
+.control-group--buttons input:checked + .align-icon {
+    background-color: #007AFF;
+    border-color: #007AFF;
+}
+
+button[type="submit"] {
+    background-color: #007AFF; 
+    color: white;
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+button[type="submit"]:hover {
+    background-color: #3F88E8;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Конструктор визиток</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="form-container">
+            <h1>Конструктор визиток</h1>
+            <form onsubmit="handleForm(this); return false;">
+                <!--Наименование организации-->
+                <div class="field">
+                    <label>Наименование организации</label>
+                    <input type="text" name="orgname" value="ООО 'Ориентир'">
+                </div>
+                 <!--ФИО-->
+                <div class="field">
+                    <label>Фамилия, имя, отчество</label>
+                    <input type="text" name="fullname" value="Фёдоров Иван Сергеевич">
+                    <div class="controls">
+                        <!--Цвет-->
+                        <div class="control-group control-group--colors">
+                            <label><input type="radio" name="fullname_color" value="#000000" checked><span></span></label>
+                            <label><input type="radio" name="fullname_color" value="#0055FB"><span></span></label>
+                            <label><input type="radio" name="fullname_color" value="#FF2D55"><span></span></label>
+                            <label><input type="radio" name="fullname_color" value="#34C759"><span></span></label>
+                            <label><input type="radio" name="fullname_color" value="#FF9500"><span></span></label>
+                            <label><input type="radio" name="fullname_color" value="#AF52DE"><span></span></label>
+                        </div>
+                         <!--Выравнивание-->
+                        <div class="control-group control-group--buttons">
+                            <label><input type="radio" name="fullname_align" value="left"><img src="img/left.png" alt="Выровнять по левому краю" class="align-icon"></label>
+                            <label><input type="radio" name="fullname_align" value="center" checked><img src="img/center.png" alt="Выровнять по центру" class="align-icon"></label>
+                            <label><input type="radio" name="fullname_align" value="right"><img src="img/right.png" alt="Выровнять по правому краю" class="align-icon"></label>
+                        </div>
+                        <!--Размер-->
+                        <div class="control-group control-group--buttons">
+                            <label><input type="radio" name="fullname_size" value="24px"><span>24px</span></label>
+                            <label><input type="radio" name="fullname_size" value="26px" checked><span>26px</span></label>
+                            <label><input type="radio" name="fullname_size" value="28px"><span>28px</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!--Должность-->
+                <div class="field">
+                    <label>Должность</label>
+                    <input type="text" name="job_title" value="Менеджер по развитию">
+                    <div class="controls">
+                        <!--Цвета для Должности-->
+                        <div class="control-group control-group--colors">
+                            <label><input type="radio" name="job_title_color" value="#000000" checked><span></span></label>
+                            <label><input type="radio" name="job_title_color" value="#555555"><span></span></label>
+                            <label><input type="radio" name="job_title_color" value="#8E8E93"><span></span></label>
+                            <label><input type="radio" name="job_title_color" value="#C7C7CC"><span></span></label>
+                        </div>
+                        <!--Выравнивание-->
+                        <div class="control-group control-group--buttons">
+                            <label><input type="radio" name="job_title_align" value="left"><img src="img/left.png" alt="Выровнять по левому краю" class="align-icon"></label>
+                            <label><input type="radio" name="job_title_align" value="center" checked><img src="img/center.png" alt="Выровнять по центру" class="align-icon"></label>
+                            <label><input type="radio" name="job_title_align" value="right"><img src="img/right.png" alt="Выровнять по правому краю" class="align-icon"></label>
+                        </div>
+                        <!--Размер-->
+                        <div class="control-group control-group--buttons">
+                            <label><input type="radio" name="job_title_size" value="14px"><span>14px</span></label>
+                            <label><input type="radio" name="job_title_size" value="16px" checked><span>16px</span></label>
+                            <label><input type="radio" name="job_title_size" value="18px"><span>18px</span></label>
+                        </div>
+                    </div>
+                </div>
+                <!--Телефон-->
+                <div class="field">
+                    <div class="phone-fields-container">
+                        <div class="phone-field-wrapper">
+                            <label>Телефон</label>
+                            <input type="text" name="phone" value="8 (999) 123-45-67">
+                        </div>
+                    </div>
+                    <button type="button" name="add-phone-btn">
+                        <img src="./img/plus.png" alt="Добавить">
+                        <span>Добавить ещё один телефон</span>
+                    </button>
+                    
+                </div>
+                <!--Email-->
+                <div class="field field--inline">
+                    <label>E-mail</label>
+                    <input type="text" name="email" value="fedorov.is@orientir.org">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="email_show" checked>
+                        <span class="custom-checkbox"></span>
+                        Отображать
+                    </label>
+                </div>
+                <!--Адрес-->
+                <div class="field field--inline">
+                    <label>Адрес</label>
+                    <input type="text" name="address" value="Иркутск, Байкальская, 421, оф. 12">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="address_show" checked>
+                        <span class="custom-checkbox"></span>
+                        Отображать
+                    </label>
+                </div>
+                
+                <button type="submit">Применить</button>
+            </form>
+        </div>
+        
+        <div class="card-container">
+            <div class="business-card">
+                <img class="card-logo" src="./img/plus.png" alt="Logo" style="display: none;">
+
+                <div class="card-org card-item--orgname">ООО "Ориентир"</div>
+                <div class="card-name card-item--fullname">Фёдоров Иван Сергеевич</div>
+                <div class="card-position card-item--job_title">Менеджер по развитию</div>
+                
+                <div class="card-item--phones">
+                    <div class="card-info">8 (999) 123-45-67</div>
+                </div>
+                <div class="card-info card-item--email">fedorov.is@orientir.org</div>
+                <div class="card-info card-item--address">Иркутск, Байкальская, 421, оф. 12</div>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
