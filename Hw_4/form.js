@@ -52,7 +52,7 @@ document.addEventListener('click', function(event) {
         const phoneFieldsContainer = addBtn.previousElementSibling;
         const phoneFields = phoneFieldsContainer.querySelectorAll('.phone-field-wrapper');
 
-        const maxPhones = 3;
+        const maxPhones = 2;
         if (phoneFields.length >= maxPhones) {
             alert(`Вы можете добавить не более ${maxPhones} номеров.`);
             return;

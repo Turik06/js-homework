@@ -16,58 +16,69 @@
                     <label>Наименование организации</label>
                     <input type="text" name="orgname" value="ООО 'Ориентир'">
                 </div>
-                 <!--ФИО-->
+                <!-- ФИО -->
                 <div class="field">
                     <label>Фамилия, имя, отчество</label>
-                    <input type="text" name="fullname" value="Фёдоров Иван Сергеевич">
-                    <div class="controls">
-                        <!--Цвет-->
-                        <div class="control-group control-group--colors">
-                            <label><input type="radio" name="fullname_color" value="#000000" checked><span></span></label>
-                            <label><input type="radio" name="fullname_color" value="#0055FB"><span></span></label>
-                            <label><input type="radio" name="fullname_color" value="#FF2D55"><span></span></label>
-                            <label><input type="radio" name="fullname_color" value="#34C759"><span></span></label>
-                            <label><input type="radio" name="fullname_color" value="#FF9500"><span></span></label>
-                            <label><input type="radio" name="fullname_color" value="#AF52DE"><span></span></label>
-                        </div>
-                         <!--Выравнивание-->
+                    
+                    <!-- Общий ряд: Инпут + Кнопки -->
+                    <div class="field-row">
+                        <input type="text" name="fullname" value="Фёдоров Иван Сергеевич">
+                        
+                        <!-- Группа кнопок выравнивания -->
                         <div class="control-group control-group--buttons">
-                            <label><input type="radio" name="fullname_align" value="left"><img src="img/left.png" alt="Выровнять по левому краю" class="align-icon"></label>
-                            <label><input type="radio" name="fullname_align" value="center" checked><img src="img/center.png" alt="Выровнять по центру" class="align-icon"></label>
-                            <label><input type="radio" name="fullname_align" value="right"><img src="img/right.png" alt="Выровнять по правому краю" class="align-icon"></label>
+                            <label><input type="radio" name="fullname_align" value="left"><img src="img/left.png" alt="L" class="align-icon"></label>
+                            <label><input type="radio" name="fullname_align" value="center" checked><img src="img/center.png" alt="C" class="align-icon"></label>
+                            <label><input type="radio" name="fullname_align" value="right"><img src="img/right.png" alt="R" class="align-icon"></label>
                         </div>
-                        <!--Размер-->
+
+                        <!-- Группа кнопок размера -->
                         <div class="control-group control-group--buttons">
                             <label><input type="radio" name="fullname_size" value="24px"><span>24px</span></label>
                             <label><input type="radio" name="fullname_size" value="26px" checked><span>26px</span></label>
                             <label><input type="radio" name="fullname_size" value="28px"><span>28px</span></label>
                         </div>
                     </div>
+
+                    <!-- Цвета (отдельной строкой ниже) -->
+                    <div class="control-group control-group--colors">
+                        <label><input type="radio" name="fullname_color" value="#000000" checked><span></span></label>
+                        <label><input type="radio" name="fullname_color" value="#0055FB"><span></span></label>
+                        <label><input type="radio" name="fullname_color" value="#FF2D55"><span></span></label>
+                        <label><input type="radio" name="fullname_color" value="#34C759"><span></span></label>
+                        <label><input type="radio" name="fullname_color" value="#FF9500"><span></span></label>
+                        <label><input type="radio" name="fullname_color" value="#AF52DE"><span></span></label>
+                    </div>
                 </div>
-                <!--Должность-->
+
+                <!-- Должность -->
                 <div class="field">
                     <label>Должность</label>
-                    <input type="text" name="job_title" value="Менеджер по развитию">
-                    <div class="controls">
-                        <!--Цвета для Должности-->
-                        <div class="control-group control-group--colors">
-                            <label><input type="radio" name="job_title_color" value="#000000" checked><span></span></label>
-                            <label><input type="radio" name="job_title_color" value="#555555"><span></span></label>
-                            <label><input type="radio" name="job_title_color" value="#8E8E93"><span></span></label>
-                            <label><input type="radio" name="job_title_color" value="#C7C7CC"><span></span></label>
-                        </div>
-                        <!--Выравнивание-->
+                    
+                    <!-- Общий ряд: Инпут + Кнопки -->
+                    <div class="field-row">
+                        <input type="text" name="job_title" value="Менеджер по развитию">
+                        
+                        <!-- Группа кнопок выравнивания -->
                         <div class="control-group control-group--buttons">
-                            <label><input type="radio" name="job_title_align" value="left"><img src="img/left.png" alt="Выровнять по левому краю" class="align-icon"></label>
-                            <label><input type="radio" name="job_title_align" value="center" checked><img src="img/center.png" alt="Выровнять по центру" class="align-icon"></label>
-                            <label><input type="radio" name="job_title_align" value="right"><img src="img/right.png" alt="Выровнять по правому краю" class="align-icon"></label>
+                            <label><input type="radio" name="job_title_align" value="left"><img src="img/left.png" alt="L" class="align-icon"></label>
+                            <label><input type="radio" name="job_title_align" value="center" checked><img src="img/center.png" alt="C" class="align-icon"></label>
+                            <label><input type="radio" name="job_title_align" value="right"><img src="img/right.png" alt="R" class="align-icon"></label>
                         </div>
-                        <!--Размер-->
+
+                        <!-- Группа кнопок размера -->
                         <div class="control-group control-group--buttons">
                             <label><input type="radio" name="job_title_size" value="14px"><span>14px</span></label>
                             <label><input type="radio" name="job_title_size" value="16px" checked><span>16px</span></label>
                             <label><input type="radio" name="job_title_size" value="18px"><span>18px</span></label>
                         </div>
+                    </div>
+
+                    <!-- Цвета (отдельной строкой ниже) -->
+                    <div class="control-group control-group--colors">
+                        <label><input type="radio" name="job_title_color" value="#000000" checked><span></span></label>
+                        <label><input type="radio" name="job_title_color" value="#555555"><span></span></label>
+                        <label><input type="radio" name="job_title_color" value="#8E8E93"><span></span></label>
+                        <label><input type="radio" name="job_title_color" value="#C7C7CC"><span></span></label>
                     </div>
                 </div>
                 <!--Телефон-->
