@@ -1,0 +1,232 @@
+body {
+    background: grey;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #707070;
+    margin: 0;
+    padding: 20px;
+}   
+
+.app {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.app__list {
+    padding: 32px 15px;
+    background: white;
+    box-shadow: 0px 0px 6px #00000029;
+    box-sizing: border-box;
+}
+
+.app__list button[data-action="newtask"] {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+.app__list button[data-action="newtask"]::before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    background: url('./image/plus.svg') 0 0 no-repeat;
+}
+
+.app__list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app__list ul > li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.app__list ul > li > * {
+    margin-right: 10px;
+}
+
+.app__list ul > li:nth-child(odd) {
+    background-color: #0606060A;
+}
+
+.app__list ul > li:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.app__list input[type="checkbox"] {
+    accent-color: #707070;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.app__list .prio {
+    opacity: 0; 
+    width: 0;
+    height: 0;
+    transition: opacity 0.2s;
+}
+.app__list .prio--hiprio {
+    opacity: 1;
+    width: 16px; 
+    height: 16px;
+    margin-right: 10px;
+}
+
+.app__list .description {
+    margin-right: auto;
+    font-size: 14px;
+    flex: 1;                 
+    min-width: 0;            
+    word-break: break-word;  
+    white-space: normal;     
+    line-height: 1.4;        
+    padding-right: 10px;
+}
+
+.app__list button[data-action="delete"],
+.app__list button[data-action="edit"] {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    flex-shrink: 0;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app__list button[data-action="delete"] img,
+.app__list button[data-action="edit"] img {
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.app__list button[data-action="delete"]:hover img,
+.app__list button[data-action="edit"]:hover img {
+    transform: scale(1.1);
+}
+.app__list input[type=checkbox]:checked + .prio + .description {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.app__list input[type=checkbox]:checked + .prio + .description + button[data-action="edit"],
+.app__list input[type=checkbox]:checked + .prio + .description + button[data-action="edit"] + button[data-action="delete"] {
+    opacity: .4;
+}
+
+.app__list input[type=checkbox]:checked ~ button {
+    opacity: 0.3;
+    filter: grayscale(100%);
+    pointer-events: none; 
+}
+
+.app__form {
+    padding: 71px 0;
+    box-sizing: border-box;
+    position: sticky;  
+    top: 0;            
+    align-self: start;
+}
+
+.app__form form {
+    width: 495px;
+    min-height: 156px;
+    padding: 28px 30px;
+    background: white;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 0px 14px 14px 0px;
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    transition: linear .3s all;
+    transform: translateX(0);
+}
+
+.app__form--visible form {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.app__form form {
+    font-size: 18px;
+    color: #000000;
+}
+
+.app__form span {
+    font-size: 14px;
+    color: #707070;
+}
+
+.app__form input[type="text"][name="description"] {
+    display: block;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #AAAAAABF;
+    border-radius: 2px;
+    width: 100%;
+    margin: 5px 0 12px 0;
+    padding: 2px 8px;
+}
+
+.app__form label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.app__form input[type="checkbox"][name="hiprio"] {
+    accent-color: #707070;
+    width: 17px;
+    height: 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.app__form button[type="submit"] {
+    width: 126px;
+    height: 32px;
+    background: #3F88E8 0% 0% no-repeat padding-box;
+    border-radius: 32px;
+    color: #FFFFFF;
+    border: #3F88E8;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.app__form button[data-action="cancelForm"] {
+    width: 126px;
+    height: 32px;
+    border: 1px solid #707070;
+    border-radius: 32px;
+    color: #707070;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.app__form button[type="submit"]:hover,
+.app__form button[data-action="cancelForm"]:hover {
+    transform: scale(1.05);
+}
