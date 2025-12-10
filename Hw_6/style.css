@@ -62,7 +62,11 @@ body {
 }
 
 .cell.mine.open {
+    background-image: url('images/bomb.png');
+    background-size: 80%; 
     background-color: #ff4d4d;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cell.flag::after {
