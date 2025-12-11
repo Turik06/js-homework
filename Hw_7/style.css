@@ -62,7 +62,7 @@ body {
 }
 
 .cell.mine.open {
-    background-image: url('images/bomb.png');
+    background-image: url('image/bomb.png');
     background-size: 80%; 
     background-color: #ff4d4d;
     background-position: center;

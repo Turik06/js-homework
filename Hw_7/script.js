@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('mine.end', (e) => {
         const { result } = e.detail;
-        
+        console.log(`Игра окончена. Результат: ${result}`);
         grid.style.pointerEvents = 'none'; 
 
         setTimeout(() => {
